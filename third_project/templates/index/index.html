@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "base/base.html" %}
+{%load static%}
+{%load my_template_tags%}
+{% block body_block%}
+<h1>Lebron James</h1>
+<p>{{insert_me|cuts:'James'}}</p>
+<img src="{% static 'images/lebronjames.jpg'%}" alt="">
+{% endblock %}

@@ -1,0 +1,10 @@
+{%extends "base/base.html"%}
+{% load static%}
+{%block body_block%}
+<h1>Contact Form</h1><br>
+<form method="post">
+  {{form.as_p}}
+  {%csrf_token%}
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+{%endblock%}

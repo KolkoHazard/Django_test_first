@@ -1,0 +1,21 @@
+{%extends "base/base.html"%}
+{% load static%}
+{%block body_block%}
+  <div>
+    <h1>Contact</h1>
+    {%if contact_records%}
+    <ol>
+      {%for contact in contact_records%}
+      <li>User Info</li>
+      <ul>
+        <li>{{contact.last_name}}</li>
+        <li>{{contact.first_name}}</li>
+        <li>{{contact.email}}</li>
+      </ul>
+      {%endfor%}
+    </ol>
+    {%else%}
+    <p>No contact_records found</p>
+    {%endif%}
+  </div>
+{%endblock%}
